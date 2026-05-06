@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom"
 import { useAuthStore } from "@/store/useAuthStore"
-import { useTheme } from "@/providers/ThemeProvider"
+import { useTheme } from "@/providers/ThemeContext"
 import { 
   LayoutDashboard, 
   Users, 
@@ -13,7 +13,8 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const SidebarItem = ({ to, icon: Icon, label, active }: { to: string, icon: any, label: string, active: boolean }) => (
+import React from "react"
+const SidebarItem = ({ to, icon: Icon, label, active }: { to: string, icon: React.ElementType, label: string, active: boolean }) => (
   <Link
     to={to}
     className={cn(

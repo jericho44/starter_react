@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom"
 import { useAuthStore } from "@/store/useAuthStore"
-import { useTheme } from "@/providers/ThemeProvider"
+import { useTheme } from "@/providers/ThemeContext"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { useState } from "react"
 

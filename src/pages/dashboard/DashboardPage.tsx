@@ -1,7 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { 
-  LineChart, 
-  Line, 
   XAxis, 
   YAxis, 
   CartesianGrid, 
@@ -22,7 +20,14 @@ const data = [
   { name: "Jul", total: 3200 },
 ]
 
-const StatCard = ({ title, value, icon: Icon, description }: any) => (
+interface StatCardProps {
+  title: string
+  value: string
+  icon: any
+  description: string
+}
+
+const StatCard = ({ title, value, icon: Icon, description }: StatCardProps) => (
   <div className="rounded-xl border bg-card p-6 shadow-sm">
     <div className="flex items-center justify-between space-y-0 pb-2">
       <h3 className="text-sm font-medium tracking-tight">{title}</h3>
