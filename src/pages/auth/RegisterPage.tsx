@@ -32,7 +32,7 @@ const RegisterPage = () => {
     resolver: zodResolver(registerSchema),
   })
 
-  const onSubmit = async (_data: RegisterFormValues) => {
+  const onSubmit = async () => {
     setIsLoading(true)
     try {
       // Simulate API call

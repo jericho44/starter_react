@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { 
   XAxis, 
   YAxis, 
@@ -23,7 +22,7 @@ const data = [
 interface StatCardProps {
   title: string
   value: string
-  icon: any
+  icon: React.ElementType
   description: string
 }
 
